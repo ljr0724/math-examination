@@ -252,11 +252,23 @@
         \item 若$\sqrt{2} \sin 2A+ \cos B= \sqrt{5}$\ ，求$OC$.
     \end{enumerate}
 
-    \begin{figure}[htbp]
-        \hfill %表示“填充剩余空间”，实现靠右+自定义间距
-        \includegraphics[width=0.3\linewidth]{pi.17.jpg}
-        \hspace{1cm} % 可选：图片右侧保留1cm间距（
-    \end{figure}
+ \begin{flushright}
+        \begin{tikzpicture}
+            \coordinate (O) at (0,0);
+            \coordinate (A) at (1.6,1.6);
+            \coordinate (B) at (-3,0);
+            \coordinate (C) at (-2,-2);
+            \coordinate (D) at (3,0);
+
+            \draw (O)--(D)--(A)--(O)--(B)--(C)--(O);
+
+            \node[below] at (O) {$O$};
+            \node[above] at (A) {$A$};
+            \node[left] at (B) {$B$};
+            \node[below] at (C) {$C$};
+            \node[right] at (D) {$D$};
+        \end{tikzpicture}
+    \end{flushright}
 
     \newpage
     \item （本小题13分）
@@ -543,11 +555,23 @@
         \item 若$\angle BAE=60^\circ$，求球类区面积的取值范围.
     \end{enumerate}
     
-    \begin{figure}[htbp]
-        \hfill %表示“填充剩余空间”，实现靠右+自定义间距
-        \includegraphics[width=0.22\linewidth]{Sigma.16.jpg}
-        \hspace{1cm} % 可选：图片右侧保留1cm间距（
-    \end{figure}
+ \begin{flushright}
+        \begin{tikzpicture}
+            \coordinate (B) at (0,0);
+            \coordinate (C) at (0,-1.2);
+            \coordinate (D) at (0.6,-1.8);
+            \coordinate (E) at (3.1,0);
+            \coordinate (A) at (1.9,1.8);
+
+            \draw (B)--(C)--(D)--(E)--(B)--(A)--(E);
+
+            \node[right] at (E) {$E$};
+            \node[above] at (A) {$A$};
+            \node[left] at (B) {$B$};
+            \node[left] at (C) {$C$};
+            \node[below] at (D) {$D$};
+        \end{tikzpicture}
+    \end{flushright}
 
     \item （本小题14分）
     
@@ -558,12 +582,35 @@
         \item 若$A_1B \perp A_1C\ ,\ AC=BC=2$，求三棱柱$ABC-A_1B_1C_1$的表面积.
     \end{enumerate}
     
-    \begin{figure}[htbp]
-        \hfill %表示“填充剩余空间”，实现靠右+自定义间距
-        \includegraphics[width=0.3\linewidth]{Sigma.17.jpg}
-        \hspace{1cm} % 可选：图片右侧保留1cm间距（
-    \end{figure}
+    \begin{flushright}
+    \tdplotsetmaincoords{77}{200}  % 设置视角
+    \begin{tikzpicture}[tdplot_main_coords]
+        \coordinate (C) at (0,0,0);
+        \coordinate (C_1) at (-1.5,0,2.5);
+        \coordinate (B) at (0,3,0);
+        \coordinate (B_1) at (-1.5,3,2.5);
+        \coordinate (A) at (3,0,0);
+        \coordinate (A_1) at (1.5,0,2.5);
+        \coordinate (D) at (1.5,0,0);
+        
+        \draw (A)--(B)--(C);
+        \draw (A_1)--(C_1)--(B_1)--(A_1);
+        \draw (A)--(A_1)--(B)--(B_1)--(C)--(C_1);
+        \draw [dashed] (A) -- (C);
+        \draw [dashed] (A_1) -- (C);
+        \draw [dashed] (A) -- (C_1);
+        \draw [dashed] (D) -- (A_1);
+        \draw [dashed] (D) -- (B);
 
+        \node[right, xshift=-2pt] at (C) {$C$};
+        \node[right] at (C_1) {$C_1$};
+        \node[below] at (B) {$B$};
+        \node[right] at (B_1) {$B_1$};
+        \node[left] at (A) {$A$};
+        \node[above] at (A_1) {$A_1$};
+        \node[left] at (D) {$D$};
+    \end{tikzpicture}
+    \end{flushright}
 
     \newpage
     \item （本小题13分）
@@ -713,6 +760,7 @@
         \task $\dfrac{\phi}{\omega}$
         \task $A \sin \phi$
     \end{tasks}
+    
     
     \begin{figure}[htbp]
         \hfill %表示“填充剩余空间”，实现靠右+自定义间距
@@ -1229,108 +1277,6 @@
         (III)\ $(\ 0,+\infty\ )$
     
     \end{tasks}
-
-%================= 知己知彼51 ===================
-\newpage
-\phantomsection
-\addcontentsline{toc}{section}{\texorpdfstring{知己知彼$51$}{知己知彼51}} % 加入目录
-\setcounter{chapPage}{1} %初始化页数
-\fancyfoot[C]{\small 高三数学\ 第 \thechapPage 页 (共$8$页)} %居中页脚
-
-\begin{center}%标题
-    {\LARGE \textbf{知己知彼$51$}}\\[1em]
-\end{center}
-
-\sectiontitle{一、选择题共 $10$ 小题，每小题 $4$ 分，共 $40$ 分。在每小题的四个选项中，选出符合题目要求的一项。}
-
-\begin{enumerate}
-
-    \item 设集合$M=\{x \mid x=2k+1\ ,\ k \in \mathbb{Z}\}$,$N=\{x\mid x=3k-1\ ,\ k \in \mathbb{Z}\}$，则$M\ \cap\ N=$
-    \begin{tasks}(2)
-        \task $\{x \mid x=2k+1\ ,\ k \in \mathbb{Z}\}$
-        \task $\{x \mid x=3k-1\ ,\ k \in \mathbb{Z}\}$
-        \task $\{x \mid x=6k+1\ ,\ k \in \mathbb{Z}\}$
-        \task $\{x \mid x=6k-1\ ,\ k \in \mathbb{Z}\}$
-    \end{tasks}
-
-    \item 已知 $3+i$ 是关于 $x$ 的方程 $2x^2-mx+n=0 \ (m,n \in \mathbb{R})$ 的一个根，则 $m+n=$
-    \begin{tasks}(4)
-        \task $20$ 
-        \task $22$
-        \task $30$
-        \task $32$
-    \end{tasks}
-
-    \item 要得到函数 $y= (\dfrac{1}{2})^{2x-1}$的图像，只需将指数函数$y=(\dfrac{1}{4})^{x}$的图像
-    \begin{tasks}(2)
-        \task 向左平移$1$个单位 
-        \task 向右平移$1$个单位 
-        \task 向左平移$\dfrac{1}{2}$个单位 
-        \task 向右平移$\dfrac{1}{2}$个单位 
-    \end{tasks}
-
-    \item 下列关于函数$y=f(x)$和$y=f(2x-1)$的叙述中，错误的是
-    \begin{enumerate}[label=(\Alph*)]
-        \item 若$y=f(x)$的定义域是$\mathbb{R}$,则$y=f(2x-1)$的定义域是$\mathbb{R}$
-        \item 若$y=f(x)$的值域是$(\ 0\ ,\ +\infty \ )$，则$y=f(2x-1)$的值域是$(\ 0\ ,\ +\infty \ )$
-        \item 若$y=f(x)$在区间$(\ -1\ ,\ 1 \ )$上单调递增，则$y=f(2x-1)$在区间$(\ -1\ ,\ 1 \ )$上单调递增
-        \item 若函数$y=f(2x-1)$是偶函数，则$y=f(x)$的图像关于$x=-1$对称
-    \end{enumerate}
-    \newpage
-    
-    \item 设$\aleph$为钝角 $v$ (单位： $km/s$ )，燃料质量 $M$ (单位： $kg$ )，与除燃料外的火箭质量$N$ (单位： $kg$ )满足：$v=2In(1+\dfrac{M}{N})$。若火箭燃料提供的最大速度约为 $16km/s$ ，则下列数值中与火箭发射时$\frac{M}{N}$最接近的是 （参考数据：$e \approx 2.7$，$\sqrt{30} \approx 5.4$）
-    \begin{tasks}(4)
-        \task $2000$ 
-        \task $2500$
-        \task $3000$
-        \task $3500$
-    \end{tasks}
-
-    \item 设函数$f(x)= \sin (\omega x+ \phi)\  (\omega  > 0,\ 0 < \phi < \frac{\pi}{2})$，$f (\dfrac{5}{16}) = 0$，$f(x)$在$x= －\dfrac{1}{4}$处取得最小值，且$[\ \dfrac{1}{2}\ ,\ \dfrac{3}{4}\ ]$是$f(x)$的一个增区间，则$ \omega =$
-    \begin{tasks}(4)
-        \task $\dfrac{8\pi}{9}$ 
-        \task $\dfrac{8\pi}{3}$
-        \task $\dfrac{40\pi}{9}$
-        \task 以上都不对
-    \end{tasks}
-
-    \item 一个不透明盒子中有 $3$ 个相同的球，其中有 $2$ 个橙球，$1$ 个白球。甲和乙两个人会从中抽 $2$ 个球并记录抽出球的颜色，其中甲每抽完一个球就放回去，乙抽完球不放回。
-    设甲抽出的橙球数量为$X$ ，$X$ 的期望为 $E(X)$，方差为$D(X)$；乙抽出的橙球量数为$Y$ ，$Y$的期望为$E(Y)$，方差为$D(Y)$。则下列说法正确的是  
-    \begin{enumerate}[label=(\Alph*)]
-        \item $E(X)>E(Y)$，$D(X)=D(Y)$
-        \item $E(X)=E(Y)$，$D(X)<D(Y)$
-        \item $E(X)=E(Y)$，$D(X)=D(Y)$
-        \item $E(X)=E(Y)$，$D(X)>D(Y)$
-    \end{enumerate}
-    
-\newpage
-    \item 已知椭圆$E1$：$\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1$与双曲线$E2$：$\dfrac{y^2}{a^2}-\dfrac{x^2}{b^2}=1\ (a \neq b \neq 0)$，$O$为坐标轴原点，则下列说法正确的个数是\\
-        \textcircled{1} $E1$ 与 $E2$ 可能有$0$、$2$或$4$个交点\\
-        \textcircled{2} "$E1$ 与 $E2$无交点”的充要条件是“$a>b>0$”\\
-        \textcircled{3} 若$E1$ 与 $E2$有四个交点$A,B,C,D$分别位于第一、二、三、四象限，$\triangle ABO$为等边三角形，则$E2$ 与 $E1$离心率之比为$\sqrt6$
-    \begin{tasks}(4)
-        \task $0$ 个
-        \task $1$ 个
-        \task $2$ 个
-        \task $3$ 个
-    \end{tasks}
-
-    \item  已知三棱锥$P-ABC$ 中，$Q$ 为 $PC$ 中点，$D$ 为$AC$ 中点，$PB\perp AB$ ，$QB=2$ ，$PA=2\sqrt2$， $BC=\sqrt3$，$cos \angle  QDB=－\dfrac{\sqrt2}{4}$，$\triangle ABC$的周长为$3+\sqrt3$，则 $PC$与面$ABC$夹角余弦值为
-    \begin{tasks}(4)
-        \task $\dfrac{\sqrt2}{2}$ 
-        \task $\dfrac{\sqrt 3}{2}$
-        \task $\dfrac{\sqrt6}{3}$
-        \task 以上都不对
-    \end{tasks}
-
-    \item 数学课上，老师给出了曲线$E$的表达式：$f(\sin 2x)=\sin x$，对于$f(x)$是否为一个函数，同学们产生了质疑，则下列说法正确的是
-    \begin{enumerate}[label=(\Alph*)]
-        \item 取$x=\dfrac{\pi}{4}$和$x=\dfrac{3\pi}{4}$能够证明$f(x)$不是函数
-        \item 若$\sin x_1=\sin x_2$，$\sin (2x_1) \neq \sin (2x_2)$有解，则不能证明$f(x)$不是函数
-        \item 设$y=\sin x$，$t=\sin (2x)$，则曲线$E$满足$t^2+(2y^2-1)^2=1$
-        \item 设$y=\sin x$，$t=\sin (2x)$，则曲线$E$满足$y^2+(2t^2-1)^2=1$
-    \end{enumerate}
-\end{enumerate}
 
 \vfill
 
